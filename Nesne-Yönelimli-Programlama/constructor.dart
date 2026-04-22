@@ -1,5 +1,5 @@
 void main(List<String> args) {
-  Araba Renault=Araba.markasizAraba(2012);
+  Araba Renault=Araba.arabamarkali("Renault");
   print("nesne üretildi");
   // honda.Marka="Honda";
   // honda.modelYili=2026;
@@ -9,12 +9,16 @@ void main(List<String> args) {
 class Araba{
   int? modelYili;
   String? Marka;
+  factory Araba.arabamarkali(String Marka){
+  
+    return Araba.modelyilsizaraba(Marka);
+  }
  
    Araba.markasizAraba(this.modelYili){
       print("arabanın markasi $Marka modelYili ${this.modelYili}") ;
   }
   Araba.modelyilsizaraba(this.Marka){
-    this.modelYili=2024;
+    this.modelYili=2005;
    print("Bu arabanın markasi $Marka modelYili $modelYili");
   }
   void bilgileriSoyle(){
